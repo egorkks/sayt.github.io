@@ -3,113 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfex0DBtSfb3F80I9ebLdGNTN2E6IdUwnfl5fP" crossorigin="anonymous">
-
+    <title>Регистрация</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f2f2f2;
-            color: #333;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: #fff;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
-            padding: 20px;
-        }
-
-        .services-section {
-            padding: 20px;
+            margin: 50px;
         }
 
         h2 {
-            color: #4CAF50;
+            color: #333;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        label {
+            font-size: 16px;
+            margin-right: 10px;
         }
 
-        li {
-            margin-bottom: 10px;
+        input {
+            padding: 8px;
+            font-size: 14px;
         }
 
-        .cta-button {
-            display: inline-block;
+        button {
             padding: 10px 20px;
-            background-color: #4CAF50;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
 
-        .contact-section {
-            background-color: #fff;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .scroll-btn {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        /* Добавленные стили для mainFunctionality */
-        #mainFunctionality {
-            padding: 20px;
-            background-color: #fff;
-            margin-top: 20px;
+        button:hover {
+            background-color: #45a049;
         }
     </style>
-    
-    <title>Кодер - Услуги</title>
 </head>
 <body>
-    <header>
-        <h1>Привет! Я предоставляю услуги кодера</h1>
-    </header>
+    <h2>Регистрация</h2>
+    <label for="registrationCode">Введите код: </label>
+    <input type="text" id="registrationCode" />
+    <button onclick="checkRegistrationCode()">Зарегистрироваться</button>
 
-    <section class="services-section">
-        <h2>Услуги кодера:</h2>
-        <ul>
-            <li>Написание бота любой сложности на JavaScript/Python</li>
-            <li>Разработка веб-сайтов любой сложности с использованием HTML</li>
-        </ul>
-        <a href="#contact" class="cta-button">&#9993; Контакты</a>
-    </section>
+    <script>
+        function checkRegistrationCode() {
+            var correctCode = "1111";
+            var enteredCode = document.getElementById("registrationCode").value;
 
-    <section id="mainFunctionality" style="display: none;">
-        <h2>Основной функционал</h2>
-        <p id="selectedServiceInfo"></p>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <h2>Свяжитесь со мной</h2>
-        <p>Для заказа услуг или получения дополнительной информации, нажмите на кнопку "Контакты".</p>
-        <p>Мой телеграм: <a href="https://t.me/w3trr">@w3trr</a></p>
-    </section>
-
-    <footer>
-        <a class="scroll-btn" href="#top">&#8593; Вверх</a>
-    </footer>
-
-    <script src="script.js"></script>
-
+            if (enteredCode === correctCode) {
+                window.location.href = "main_functionality.html";
+            } else {
+                alert("Неправильный код регистрации. Пожалуйста, попробуйте еще раз.");
+            }
+        }
+    </script>
 </body>
 </html>
