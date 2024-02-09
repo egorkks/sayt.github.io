@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem('selectedService', selectedService);
 
             // Перенаправляем пользователя на другую страницу в папке system1
-            window.location.href = "file:///C:/Users/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/Desktop/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7/system/system1/main_functionality.html"
+            window.location.href = "file:///C:/Users/%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C/Desktop/%D0%97%D0%B0%D0%BA%D0%B0%D0%B7/system/system1/mainFunctionality.html"
             return true; // Разрешаем отправку формы
         } else {
             alert('Неправильный код доступа. Попробуйте снова.');
