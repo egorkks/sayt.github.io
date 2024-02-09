@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с доступом по коду</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Сайт с доступом по коду</h1>
+    </header>
+
+    <form id="accessForm">
+        <label for="accessCode">Введите код доступа:</label>
+        <input type="password" id="accessCode" name="accessCode" required>
+        <button type="button" id="accessButton">Войти</button>
+    </form>
+
+    <section id="mainFunctionality" style="display: none;">
+        <h2>Основной функционал</h2>
+        <p id="selectedServiceInfo"></p>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
