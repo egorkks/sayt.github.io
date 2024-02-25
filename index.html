@@ -2,61 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f0f0f0;
             text-align: center;
             margin: 50px;
         }
 
-        h2 {
+        #container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h1 {
             color: #333;
         }
 
-        label {
-            font-size: 16px;
-            margin-right: 10px;
+        #question {
+            margin: 20px 0;
         }
 
-        input {
-            padding: 8px;
-            font-size: 14px;
+        #buttons {
+            display: flex;
+            justify-content: center;
         }
 
         button {
             padding: 10px 20px;
+            margin: 0 10px;
             font-size: 16px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #45a049;
+        #yes {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+        }
+
+        #no {
+            background-color: #f44336;
+            color: #fff;
+            border: none;
         }
     </style>
-</head>
-<body>
-    <h2>Регистрация</h2>
-    <label for="registrationCode">Введите код: </label>
-    <input type="text" id="registrationCode" />
-    <button onclick="checkRegistrationCode()">Зарегистрироваться</button>
-
     <script>
-        function checkRegistrationCode() {
-            var correctCode = "1111";
-            var enteredCode = document.getElementById("registrationCode").value;
-
-            if (enteredCode === correctCode) {
-                window.location.href = "mainFunctionality.html";
-            } else {
-                alert("Неправильный код регистрации. Пожалуйста, попробуйте еще раз.");
+        function handleButtonClick(answer) {
+            if (answer === 'yes') {
+                alert("Действие невозможно!");
+            } else if (answer === 'no') {
+                alert("Ура!");
             }
         }
     </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Предложение от Егора</h1>
+        <div id="question">
+            <p>Дать тебе 300 лей на ногти?</p>
+        </div>
+        <div id="buttons">
+            <button id="yes" onclick="handleButtonClick('yes')">Да</button>
+            <button id="no" onclick="handleButtonClick('no')">Нет</button>
+        </div>
+    </div>
 </body>
 </html>
